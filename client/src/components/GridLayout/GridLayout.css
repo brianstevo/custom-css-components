@@ -1,0 +1,138 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 30px;
+}
+
+.col {
+  background-color: red;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 14%;
+}
+
+.col-1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* max-width: 8.33%; */
+  max-width: calc((100% - 30px) / 12);
+  background-color: red;
+}
+.col-2 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: calc((100% - 30px) / 6);
+  background-color: red;
+}
+.col-3 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: calc((100% - 30px) / 4);
+  background-color: red;
+}
+.col-4 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: calc((100% - 30px) / 3);
+  background-color: red;
+}
+.col-5 {
+  max-width: 41.66%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* max-width: 8.33%; */
+  max-width: calc((41.66%- 30px));
+  background-color: red;
+}
+.col-6 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* max-width: 8.33%; */
+  max-width: calc((100% - 30px) / 2);
+  background-color: red;
+}
+.col-7 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* max-width: 8.33%; */
+  max-width: calc((58.33% - 30px));
+  background-color: red;
+}
+.col-8 {
+  flex: 1 0 66.66%;
+  max-width: 66.66%;
+  padding: 0 15px;
+}
+.col-9 {
+  flex: 1 0 75%;
+  max-width: 75%;
+  padding: 0 15px;
+}
+.col-10 {
+  flex: 1 0 83.33%;
+  max-width: 83.33%;
+  padding: 0 15px;
+}
+.col-11 {
+  flex: 1 0 91.66%;
+  max-width: 91.66%;
+  padding: 0 15px;
+}
+.col-12 {
+  flex: 1 0 100%;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* [class*='col-'] {
+    max-width: 90%;
+    margin: auto;
+  } */
+  /* 
+  .col-1 {
+    width: 90%;
+  } */
+  /* .col-1-of-3 {
+      width: 100% !important;
+  } */
+}
+
+@media only screen and (max-width: 540px) {
+  /* [class*='col-'] {
+    width: 90%;
+    margin: auto;
+  } */
+  .col {
+    width: 90% !important;
+  }
+  .col-1 {
+    max-width: 90% !important;
+    /* margin: auto; */
+  }
+
+  .col-6 {
+    max-width: 90% !important;
+    /* margin: auto; */
+  }
+}
+
+@media (min-width: 540px) and (max-width: 768px) {
+  /* … */
+  .col {
+    width: 45% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* … */
+  .col {
+    width: 20% !important;
+  }
+}

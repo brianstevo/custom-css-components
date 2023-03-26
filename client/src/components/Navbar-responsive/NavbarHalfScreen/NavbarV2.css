@@ -1,0 +1,133 @@
+.logo {
+  max-width: 200px;
+}
+.navbar {
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  padding: 10px 50px;
+  z-index: 1000;
+}
+.push-left {
+  margin-left: auto;
+}
+/* Menu */
+.hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  height: 30px;
+  position: relative;
+  width: 30px;
+  z-index: 1000;
+}
+.hamburger-line {
+  background: #444444;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamburger:hover .hamburger-line {
+  background: #14b8a6;
+}
+.hamburger-line-top {
+  top: 3px;
+}
+.menu-active .hamburger-line-top {
+  top: 50%;
+  transform: rotate(45deg) translatey(-50%);
+}
+.hamburger-line-middle {
+  top: 50%;
+  transform: translatey(-50%);
+}
+.menu-active .hamburger-line-middle {
+  left: 50%;
+  opacity: 0;
+  width: 0;
+}
+.hamburger-line-bottom {
+  bottom: 3px;
+}
+.menu-active .hamburger-line-bottom {
+  bottom: 50%;
+  transform: rotate(-45deg) translatey(50%);
+}
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-menu .menu-item a {
+  color: #444444;
+  display: block;
+  line-height: 30px;
+  margin: 0px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-menu .menu-item a:hover {
+  color: #14b8a6;
+  text-decoration: none;
+}
+.sub-nav {
+  border: 1px solid #ccc;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 5px 5px;
+  list-style: none;
+  width: 230px;
+}
+.nav__link:hover + .sub-nav {
+  display: block;
+}
+.sub-nav:hover {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    background: #fff;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 90%;
+    margin: 0 auto;
+    transform: translatey(-100%);
+    text-align: center;
+    transition: all 0.25s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .menu-active .nav-menu {
+    transform: translatey(0%);
+    opacity: 1;
+    top: 78px;
+    transition: all 0.25s ease-in;
+  }
+  .nav-menu .menu-item a {
+    font-size: 20px;
+    margin: 8px;
+    padding: 10px 0;
+  }
+  .sub-nav {
+    position: relative;
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+}
