@@ -3,10 +3,13 @@ import './Alert.css'
 
 const Alert = () => {
   return (
-    <div className='alert success'>
-      <div className='close'>&times;</div>
-      <p>alert message!</p>
-    </div>
+    <>
+      <h1>Alert</h1>
+      <div className='alert success'>
+        <div className='close'>&times;</div>
+        <p>Alert message!</p>
+      </div>
+    </>
   )
 }
 
