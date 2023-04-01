@@ -203,6 +203,51 @@ const Grid = () => {
           <div className='flex-col-lg-12'>flex-col-lg-12</div>
         </div>
         <div className='flex-row'>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+          <div className='flex-col-xl-1'>flex-col-xl-1</div>
+        </div>
+        <div className='flex-row'>
+          <div className='flex-col-xl-2'>flex-col-xl-2</div>
+          <div className='flex-col-xl-2'>flex-col-xl-2</div>
+          <div className='flex-col-xl-2'>flex-col-xl-2</div>
+          <div className='flex-col-xl-2'>flex-col-xl-2</div>
+          <div className='flex-col-xl-2'>flex-col-xl-2</div>
+          <div className='flex-col-xl-2'>flex-col-xl-2</div>
+        </div>
+        <div className='flex-row'>
+          <div className='flex-col-xl-3'>flex-col-xl-3</div>
+          <div className='flex-col-xl-3'>flex-col-xl-3</div>
+          <div className='flex-col-xl-3'>flex-col-xl-3</div>
+          <div className='flex-col-xl-3'>flex-col-xl-3</div>
+        </div>
+        <div className='flex-row'>
+          <div className='flex-col-xl-4'>flex-col-xl-4</div>
+          <div className='flex-col-xl-4'>flex-col-xl-4</div>
+          <div className='flex-col-xl-4'>flex-col-xl-4</div>
+        </div>
+        <div className='flex-row'>
+          <div className='flex-col-xl-2'>flex-col-xl-2</div>
+          <div className='flex-col-xl-5'>flex-col-xl-5</div>
+          <div className='flex-col-xl-5'>flex-col-xl-5</div>
+        </div>
+        <div className='flex-row'>
+          <div className='flex-col-xl-6'>flex-col-xl-6</div>
+          <div className='flex-col-xl-6'>flex-col-xl-6</div>
+        </div>
+        <div className='flex-row'>
+          <div className='flex-col-xl-12'>flex-col-xl-12</div>
+        </div>
+        <div className='flex-row'>
           <div className='flex-col'>flex-col</div>
           <div className='flex-col'>flex-col</div>
           <div className='flex-col'>flex-col</div>
