@@ -20,12 +20,6 @@ const Card = () => {
           </div>
           <hr />
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, dignissimos.</p>
-          <div className='btn-group'>
-            <div className='btn'>
-              <a href=''>Buy Now</a>
-            </div>
-            <a href=''> Cancel</a>
-          </div>
         </div>
       </div>
     </>

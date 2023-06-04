@@ -46,8 +46,12 @@ p {
   margin-bottom: 24px;
 }
 
-.mr-16b {
-  margin-bottom: 16px;
+.mgR10 {
+  margin-right: 10px;
+}
+
+.mg0 {
+  margin: 0;
 }
 
 .mr-8b {

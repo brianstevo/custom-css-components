@@ -21,16 +21,7 @@ function NavbarV2() {
               Home
             </a>
           </li>
-          <li className='menu-item current-menu-item'>
-            <a className='nav__link' href='#'>
-              Home
-            </a>
-          </li>
-          <li className='menu-item current-menu-item'>
-            <a className='nav__link' href='#'>
-              Home
-            </a>
-          </li>
+
           <li className='menu-item '>
             <a className='nav__link' href='#'>
               Blog
