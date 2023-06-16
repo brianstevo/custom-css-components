@@ -29,23 +29,6 @@ p {
   padding: 20px;
 }
 
-.pd-8y {
-  padding: 8px 0;
-}
-
-.pd-16x {
-  padding-right: 16px;
-  padding-left: 16px;
-}
-
-.pd-16y.pd-8x {
-  padding: 16px 8px;
-}
-
-.mr-24b {
-  margin-bottom: 24px;
-}
-
 .mgR10 {
   margin-right: 10px;
 }
@@ -57,3 +40,8 @@ p {
 .mr-8b {
   margin-bottom: 8px;
 }
+
+/* .disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+} */

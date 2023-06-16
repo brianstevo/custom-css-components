@@ -6,6 +6,7 @@
   height: 40px;
   -webkit-animation: spin 1.2s linear infinite;
   animation: spin 1.2s linear infinite;
+  display: inline-block;
 }
 @-webkit-keyframes spin {
   0% {

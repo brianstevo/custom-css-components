@@ -1,0 +1,90 @@
+.pagination-container {
+  display: flex;
+  list-style-type: none;
+}
+.pagination-container .pagination-item {
+  padding: 0 12px;
+  height: 32px;
+  text-align: center;
+  margin: auto 3px;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.08);
+
+  border-radius: 5x;
+}
+
+.pagination-container .pagination-arrow-item {
+  height: 32px;
+  text-align: center;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 13px;
+  border-radius: 5x;
+}
+.pagination-arrow-left {
+  padding-left: 12px;
+}
+.pagination-arrow-right {
+  padding-right: 12px;
+}
+.pagination-container .pagination-item.dots {
+  background-color: transparent;
+  cursor: default;
+}
+.pagination-container .pagination-item.dots:hover {
+  background-color: transparent;
+  cursor: default;
+}
+.pagination-container .pagination-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+.pagination-container .pagination-item.selected {
+  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgb(84, 105, 212);
+  color: white;
+}
+.pagination-container .arrow::before {
+  position: relative;
+  /* top: 3pt;
+  Uncomment this to lower the icons as requested in comments*/
+  content: '';
+  /* By using an em scale, the arrows will size with the font */
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+}
+.pagination-container .arrow.left {
+  transform: rotate(-135deg) translate(-50%);
+}
+.pagination-container .arrow.right {
+  transform: rotate(45deg);
+}
+.pagination-container .disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: default;
+}
+/* .pagination-container .pagination-item.disabled .arrow::before {
+  border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+}
+.pagination-container .pagination-item.disabled:hover {
+  background-color: transparent;
+  cursor: default;
+} */
+.pagination-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

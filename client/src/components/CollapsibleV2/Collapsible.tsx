@@ -4,27 +4,28 @@ import './Collapsible.css'
 export interface CollapsibleProps {
   title: string
   children?: ReactNode
+  initialExpandedState?: Boolean
 }
 
-const CollapsibleV2 = ({ title, children }: CollapsibleProps) => {
-  const [open, setOpen] = useState(true)
+const CollapsibleV2 = ({ title, children, initialExpandedState = true }: CollapsibleProps) => {
+  const [open, setOpen] = useState(initialExpandedState)
   const divRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (divRef.current && open) {
-      divRef.current.style.height = divRef.current.scrollHeight + 'px'
+      divRef.current.style.maxHeight = divRef.current.scrollHeight + 'px'
     }
   }, [])
 
   const handleClick = () => {
-    setOpen(!open)
     if (divRef.current) {
-      if (divRef.current.style.height) {
-        divRef.current.style.height = ''
+      if (divRef.current.style.maxHeight) {
+        divRef.current.style.maxHeight = ''
       } else {
-        divRef.current.style.height = divRef.current.scrollHeight + 'px'
+        divRef.current.style.maxHeight = divRef.current.scrollHeight + 'px'
       }
     }
+    setOpen(!open)
   }
 
   return (

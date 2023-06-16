@@ -1,4 +1,4 @@
-.modalBackground {
+.overlay {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -7,17 +7,20 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  background: rgba(15, 23, 42, 0.4);
+  background: rgba(15, 23, 42, 0.5);
+  animation: modal 100ms linear normal;
 }
 
 .modalContainer {
   border-radius: 6px;
-  margin-top: -250px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
+  animation: modal 100ms linear normal;
+  margin: -250px 20px 0 20px;
 }
+
 .modalContainer .modalTitle {
   display: flex;
   justify-content: space-between;
@@ -41,4 +44,13 @@
 .modalContainer .modalFooter {
   padding: 10px 20px;
   text-align: end;
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

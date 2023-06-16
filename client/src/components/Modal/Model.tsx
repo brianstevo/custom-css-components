@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { ReactNode, useEffect } from 'react'
 import './Modal.css'
 import Button from '../Button2/Button'
+import ReactDOM from 'react-dom'
 
 export interface ModalProps {
   open: boolean
+  title: string
   width?: string
-  setOpenModal: (x: boolean) => React.MouseEventHandler<HTMLButtonElement>
+  setOpenModal: (value: boolean) => void
+  children: ReactNode
 }
 
-function Modal({ open, width = '600px', setOpenModal }: ModalProps) {
+const ModalContainer = ({ open, title, width = '500px', setOpenModal, children }: ModalProps) => {
   useEffect(() => {
     if (open && typeof window != 'undefined' && window.document) {
       document.body.style.overflow = 'hidden'
@@ -24,14 +27,20 @@ function Modal({ open, width = '600px', setOpenModal }: ModalProps) {
     <>
       {open && (
         <div
-          className='modalBackground'
+          className='overlay'
           onClick={() => {
             setOpenModal(false)
           }}
         >
-          <div className='modalContainer' style={{ maxWidth: width }}>
+          <div
+            className='modalContainer'
+            style={{ width: width }}
+            onClick={(event) => {
+              event.stopPropagation()
+            }}
+          >
             <div className='modalTitle'>
-              <h3>Modal Title</h3>
+              <h3>{title}</h3>
               <button
                 onClick={() => {
                   setOpenModal(false)
@@ -41,7 +50,7 @@ function Modal({ open, width = '600px', setOpenModal }: ModalProps) {
               </button>
             </div>
             <div className='modalBody'>
-              <p>Are You Sure You Want to Continue?</p>
+              <p>{children}</p>
             </div>
             <div className='modalFooter'>
               <Button
@@ -61,6 +70,10 @@ function Modal({ open, width = '600px', setOpenModal }: ModalProps) {
       )}
     </>
   )
+}
+
+const Modal = ({ open, title, width, setOpenModal, children }: ModalProps) => {
+  return <>{ReactDOM.createPortal(<ModalContainer open={open} title={title} width={width} setOpenModal={setOpenModal} children={children} />, document.getElementById('overlay-root') as HTMLElement)}</>
 }
 
 export default Modal

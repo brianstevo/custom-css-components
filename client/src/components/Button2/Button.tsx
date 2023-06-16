@@ -1,5 +1,5 @@
 import React from 'react'
-import './Button2.css'
+import style from './Button2.module.css'
 
 export interface ButtonProps {
   type?: 'btn' | 'btn-block'
@@ -15,7 +15,7 @@ export interface ButtonProps {
 
 const Button = ({ type = 'btn', size = 'btn-lg', color = 'btn-primary', variant = 'normal', label, disabled = false, onClick, className = 'mg0' }: ButtonProps) => {
   return (
-    <button className={`${type} ${size} ${color} btn-${variant} ${className}`} disabled={disabled} onClick={onClick}>
+    <button className={`${style[type]} ${style[size]} ${style[color]} ${style[`btn-${variant}`]} ${className}`} disabled={disabled} onClick={onClick}>
       {label}
     </button>
   )
