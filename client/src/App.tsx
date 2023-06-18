@@ -19,6 +19,9 @@ import CollapsibleV2 from './components/CollapsibleV2/Collapsible'
 import Modal from './components/Modal/Model'
 import { FlexColumn, FlexContainer, FlexRow } from './components/FlexGrid/FlexGrid'
 import Pagination from './components/Pagination/Pagination'
+import Carousel from './components/Carousel/Carousel'
+import Carousel2 from './components/Carousel2/Carousel2'
+import Carousel3 from './components/Carousel3/Carousel3'
 function App() {
   const [open, setOpen] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
@@ -34,10 +37,24 @@ function App() {
     console.log('fi')
     setCurrentPage(page)
   }
+  const images = [
+    'https://res.cloudinary.com/ifeomaimoh/image/upload/v1652345767/demo_image2.jpg',
+    'https://res.cloudinary.com/ifeomaimoh/image/upload/v1652366604/demo_image5.jpg',
+    'https://res.cloudinary.com/ifeomaimoh/image/upload/v1652345874/demo_image1.jpg',
+    // Add more image URLs as needed
+  ]
 
+  const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10']
   return (
     <>
       <NavbarV2 />
+      {/* <Carousel images={images} /> */}
+      {/* <Carousel3 itemsPerView={3}>
+        {items.map((item, index) => (
+          <div key={index}>{item}</div>
+        ))}
+      </Carousel3> */}
+      <Carousel2 />
       <Button label='submit' color='btn-outline-teal' type='btn' size='btn-lg' disabled={false} onClick={handleClick} />
       <Modal open={open} title='Modal' setOpenModal={setOpenModal}>
         Are You Sure You Want to Continue?

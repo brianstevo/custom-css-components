@@ -59,12 +59,16 @@ const Pagination = ({ totalCount, currentPage = 1, pageSize, onPageChange, sibli
         paginationRange.map((pageNumber) => {
           // If the pageItem is a DOT, render the DOTS unicode character
           if (pageNumber === '...') {
-            return <li className='pagination-item dots'>&#8230;</li>
+            return (
+              <li key={pageNumber} className='pagination-item dots'>
+                &#8230;
+              </li>
+            )
           }
 
           // Render our Page Pills
           return (
-            <li className={pageNumber === currentPage ? 'pagination-item  selected' : 'pagination-item'} onClick={() => onPageChange(pageNumber)}>
+            <li key={pageNumber} className={pageNumber === currentPage ? 'pagination-item  selected' : 'pagination-item'} onClick={() => onPageChange(pageNumber)}>
               {pageNumber}
             </li>
           )
